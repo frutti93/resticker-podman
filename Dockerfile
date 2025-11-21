@@ -87,4 +87,6 @@ COPY --from=builder /usr/local/bin/* /usr/local/bin/
 COPY backup prune check /usr/local/bin/
 COPY entrypoint /
 
+VOLUME /var/lib/containers
+
 ENTRYPOINT ["/sbin/tini", "--", "/entrypoint"]
